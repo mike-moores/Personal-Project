@@ -1,0 +1,80 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+}
+
+.bg {
+  background-image: url('client/images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.player {
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 2vh;
+  left: 40px;
+  transition: transform 0.3s ease;
+}
+
+.zombie {
+  width: 20%;
+  height: auto;
+  position: absolute;
+  bottom: 6vh;
+  left: 1200px;
+}
+.jump {
+  animation-name: jumping;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  animation-duration: 0.4s;
+}
+
+@keyframes jumping {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-15vh);
+  }
+  40% {
+    transform: translateY(-30vh);
+  }
+  60% {
+    transform: translateY(-45vh);
+  }
+  80% {
+    transform: translateY(-30vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.walk {
+  animation-name: walking;
+  animation-timing-function: steps(2, end);
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes walking {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px); /* Adjust the distance of each step */
+  }
+}
