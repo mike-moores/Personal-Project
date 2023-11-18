@@ -1,6 +1,5 @@
-import React from 'react'
 import { Provider } from 'react-redux'
-import store from '/home/michael/workspace/Mike-Personal-Project/server/redux/store.jsx' // Import your Redux store
+import store from '/home/michael/workspace/Mike-Personal-Project/server/redux/store.jsx' 
 import Player from './PlayerCharacter.tsx'
 import '/home/michael/workspace/Mike-Personal-Project/client/styles/main.css'
 
